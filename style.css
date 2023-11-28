@@ -1,0 +1,1009 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    background: #B6E2D3;
+}
+
+@media(1024px <=width <=1440px) {
+    html {
+        font-size: 13.5px;
+    }
+}
+
+/* ------------------ Loading Page CSS -------------------------------------------- */
+#Loading-Page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    z-index: 9999;
+    background: #4492f4 ;
+
+}
+
+.loder {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.loder img {
+    height: 35%;
+    width: 25%;
+}
+
+/* ------------------------ Main Page Content ------------------------------------------- */
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: #D3B1C2;
+
+}
+
+
+/*----------------------------- Navbar Menu -------------------------------------------------*/
+nav {
+    border-radius: 2.5rem;
+    background: #613659;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 2rem 1.2rem;
+    height: 20rem;
+    justify-content: space-around;
+}
+
+nav a img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/*--------------------------- Section - Portfolio --------------------------------------------*/
+.portfolio {
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    height: 85%;
+    width: 75%;
+}
+
+/*-------------------------- Section - Header -----------------------------------------------*/
+.portfolio .Header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 3rem;
+    height: 100%;
+    width: 30%;
+    overflow: auto;
+    /* background: rgb(22, 22, 114); */
+    color: #211522;
+}
+
+.portfolio .Header #Profile {
+    border-radius: 50%;
+    height: 35%;
+    aspect-ratio: 1/1;
+    margin: 4rem 0rem 1.5rem 0rem;
+    box-shadow: 0rem 0rem 0.5rem 0.1rem #ffffff;
+}
+
+.portfolio .Header H1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0rem 0rem 1rem 0rem;
+    
+}
+
+.portfolio .Header h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+.portfolio .Header .social {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio .Header .social a img {
+    height: 1.4rem;
+    width: 1.5rem;
+    margin: auto;
+}
+
+.portfolio .Header .myCV {
+    position: relative;
+    top: 15%;
+}
+
+.portfolio .Header .myCV a button {
+    border-radius: 0.5rem;
+    color: #ffffff;
+    padding: 0.5rem 1.8rem;
+    background-color: #613659;
+    box-shadow: 0rem 0.2rem 0.1rem 0.01rem #000000;
+    border-bottom: 3.5px solid #000000;
+    font-family: 'Muli', sans-serif;
+    cursor: pointer;
+}
+
+.portfolio .Header .myCV a button:hover {
+    background-color: #732c66;
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+.portfolio .Header .myCV a button:active {
+    border-bottom: 2px solid #000000;
+}
+
+/*----------------------------- Section - Content---------------------------------------------- */
+
+.portfolio .content {
+    background-color: #ffffff;
+    border-radius: 3rem;
+    box-sizing: border-box;
+    height: 100%;
+    background: #C197D2;
+    width: 70%;
+    overflow-y: scroll;
+    padding: 1rem;
+}
+
+.portfolio .content::-webkit-scrollbar {
+    display: none;
+}
+
+/*--------------- 1st and Homep Page of Content ---------------*/
+.portfolio .content #Home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+}
+
+.portfolio .content #Home .wrapper {
+    display: inline-flex;
+    margin-left: 1rem;
+}
+
+.portfolio .content #Home .wrapper .static-text {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.portfolio .content #Home .wrapper .dynamic-text {
+    margin-left: 0.5rem;
+    height: 4.5rem;
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+    overflow: hidden;
+}
+
+.portfolio .content #Home .wrapper .dynamic-text li {
+    list-style: none;
+    font-weight: 600;
+    color: #211522;
+    position: relative;
+    top: 0;
+    animation: slide 8.8s steps(4) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -18rem;
+    }
+}
+
+.portfolio .content #Home .wrapper .dynamic-text li span {
+    position: relative;
+}
+
+.portfolio .content #Home .wrapper .dynamic-text li span::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 98%;
+    left: 0;
+    border-left: 5px solid red;
+    background: #C197D2;
+    animation: typing 2.2s steps(18) infinite;
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -1rem 0 1rem;
+    }
+}
+
+/* -------------------- 2nd Page - About me  --------------------- */
+.portfolio .content #About {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #211522;
+    height: 110%;
+    padding: 2rem;
+    margin: 1rem 0rem;
+}
+
+#About div {
+    margin: 0.5rem;
+}
+
+#About .about {
+    display: flex;
+    height: 70%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#About .about h2 {
+    font-size: 2rem;
+}
+
+#About .about ul li {
+    list-style: square;
+    margin: 1rem 0rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+#About .about ul li span {
+    margin-top: 1rem;
+}
+
+#About .skill {
+    height: 30%;
+    width: 97%;
+}
+
+#About .skill h2 {
+    margin-bottom: 1rem;
+}
+
+#About .skill .itoms {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+#About .skill .itoms span {
+    padding: 0.5rem;
+    border: solid #613659;
+    color: #e6d8e7;
+    font-weight: 700;
+    background: #613659;
+    border-radius: 1rem;
+    margin: 0.5rem;
+
+}
+
+/* -------------------- 3rd Page - Projects  --------------------- */
+
+.portfolio .content #Projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #211522;
+    padding:  1rem;
+}
+
+#Projects .Heading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+#Projects .project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 85%;
+    gap: 1rem;
+}
+
+.card {
+    box-sizing: border-box;
+    border-radius: 1.2rem;
+    margin: 0.3rem;
+    cursor: pointer;
+    box-shadow: 6px 6px 22px rgba(0, 19, 112, 0.826);
+    overflow: hidden;
+    transition: transform 0.8s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.2rem;
+}
+
+.card .intro {
+    background: #211522;
+    position: relative;
+    bottom: 0%;
+    height: 100%;
+    color: #211522;
+    padding: 1.5rem;
+    border-radius: 1.1rem;
+    transition: 0.8s;
+}
+
+.card:hover .intro {
+    bottom: 103%;
+    height: 100%;
+    background: #D3B1C2;
+}
+
+.card .intro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+}
+
+/* -------------------- 4th Page - Contact Us  --------------------- */
+
+
+.portfolio .content #Contact {
+    height: 70vh;
+    padding: 2rem;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    margin-top: 5rem;
+}
+
+#Contact .Heading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #211522;
+}
+
+#Contact .Head {
+    height: 80%;
+    padding: 1.5rem;
+}
+
+#Contact .Head p {
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-weight: bold;
+    color:#211522;
+}
+
+#Contact .form-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 65%;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    margin: auto;
+    transition: transform 0.8s;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+}
+
+#Contact .form-box:hover {
+    transform: scale(1.05);
+}
+
+.form-box form {
+    width: 65%;
+}
+
+#Contact .form-box form .input-box {
+    position: relative;
+    width: 100%;
+    height: 1.5rem;
+    margin: 1.5rem 0;
+    border-bottom: 2px solid #613659;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    font-weight: 500;
+    pointer-events: none;
+    font-style: italic;
+    transition: 0.5s;
+    line-height: 1rem;
+    color: #989090a1;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -0.6rem;
+    left: 0;
+    font-size: small;
+    font-weight: 600;
+    color: #211522;
+    font-style: normal;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: #613659;
+    border: none;
+    outline: none;
+    font-weight: 600;
+}
+
+
+.main_div {
+    --color: #211522;
+    position: relative;
+    z-index: 1;
+    margin: auto;
+    width: 7.7rem;
+}
+
+.main_div::before {
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    top: -0.47rem;
+    left: -0.47rem;
+    z-index: -5;
+    border-top: 0.2rem solid var(--color);
+    border-left: 0.2rem solid var(--color);
+    transition: 0.5s;
+}
+
+.main_div::after {
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    bottom: -0.47rem;
+    right: -0.47rem;
+    z-index: -5;
+    border-right: 0.2rem solid var(--color);
+    border-bottom: 0.2rem solid var(--color);
+    transition: 0.5s;
+}
+
+.main_div:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.main_div:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.main_div button {
+    padding: 0.7em 2em;
+    font-size: 1rem;
+    background: #613659;
+    color: #211522;
+    border: none;
+    cursor: pointer;
+    border-bottom-left-radius: 0.67rem;
+    border-top-right-radius: 0.67rem;
+    font-family: inherit;
+}
+
+.main_div button:hover {
+    background: whitesmoke;
+    color: #211522;
+    font-weight: 600;
+}
+
+/* ----------------Media query for Screen Between 1025px to 1440px----------------------- */
+@media(1024px <=width <=1440px) {
+    .portfolio .content #About {
+        height: 100%;
+    }
+
+    #About .about {
+        height: 75%;
+    }
+
+    #About .skill {
+        height: 23%;
+    }
+}
+
+/* ----------------Media Query Screen Between 768px to 1024px-------------------------- */
+
+@media(768px <=width < 1024px) {
+    html {
+        font-size: 10.5px;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    nav {
+        align-items: center;
+        flex-direction: row;
+        padding: 1rem 2rem;
+        height: 3rem;
+        justify-content: space-around;
+        width: 20rem;
+    }
+
+    .portfolio {
+        width: 97%;
+    }
+
+    .portfolio .Header H1 {
+        font-size: 3.6rem;
+    }
+
+    .portfolio .content #About {
+        height: 100%;
+        gap: 2rem;
+    }
+
+    #About .about {
+        height: 76%;
+    }
+
+    #About .about h2 {
+        font-size: 2.5rem;
+    }
+
+    #About .about ul li {
+        font-size: 1.5rem;
+    }
+
+    #About .skill {
+        height: 25%;
+    }
+
+    #About .skill h2 {
+        font-size: 2rem;
+    }
+
+    #About .skill span {
+        font-size: 1.2rem;
+    }
+
+    #Projects .Heading {
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .card p {
+        font-size: 1.25rem;
+    }
+
+    #Contact .Heading {
+        font-size: 2.5rem;
+    }
+    .loder img {
+        height: 30%;
+        width: 35%;
+    }
+}
+
+/* ----------------Media Query Screen Between 425px to 767px-------------------------- */
+@media(460px <=width < 768px) {
+    html {
+        font-size: 10px;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    nav {
+        align-items: center;
+        flex-direction: row;
+        padding: 1rem 2rem;
+        height: 3rem;
+        justify-content: space-around;
+        width: 20rem;
+        z-index: 2;
+        position: fixed;
+        bottom: 2rem;
+    }
+
+    .portfolio {
+        width: 90%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .portfolio .Header {
+        height: 76%;
+        position: fixed;
+        width: 60%;
+    }
+
+    .portfolio .Header H1 {
+        font-size: 4.1rem;
+    }
+
+    .portfolio .Header h2 {
+        font-size: 2rem;
+    }
+
+    .portfolio .Header .social a img {
+        height: 2.2rem;
+        width: 2.2rem;
+        margin: 1.5rem 2rem;
+    }
+
+    .portfolio .content {
+        position: relative;
+        top: 75%;
+        width: 100%;
+        height: 56%
+    }
+
+    .portfolio .content #Home {
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 2rem;
+        height: 40%
+    }
+
+    .portfolio .content #Home .wrapper {
+        margin: 1.5rem;
+    }
+
+    .portfolio .content #Home .wrapper .dynamic-text {
+        margin-left: 0.5rem;
+        height: 4rem;
+        font-size: 3rem;
+        line-height: 4rem;
+        overflow: hidden;
+    }
+
+    .portfolio .content #Home .wrapper .dynamic-text li span::after {
+        height: 105%;
+    }
+
+    @keyframes slide {
+        100% {
+            top: -16rem;
+        }
+    }
+
+    .portfolio .content #About {
+        max-height: 120%;
+        min-height: 158%;
+        padding-bottom: 0rem;
+        margin-bottom: 5%;
+    }
+
+    #About .about {
+        height: 100%;
+        gap: 0rem;
+    }
+
+    #About .about h2 {
+        font-size: 3.5rem;
+    }
+
+    #About .about ul li {
+        font-size: 1.6rem;
+    }
+
+    #About .skill {
+        height: 25%;
+        width: 97%;
+    }
+
+    #About .skill h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #About .skill span {
+        padding: 0.3rem;
+        border-radius: 1.4rem;
+        font-size: 1.6rem;
+        margin-right: 1rem;
+    }
+
+    #Projects .Heading {
+        font-size: 3.5rem;
+    }
+
+    .card .intro h2 {
+        font-size: 2.5rem;
+    }
+
+    .card p {
+        font-size: 1.25rem;
+    }
+
+    .portfolio .content #Contact {
+        height: 150%;
+    }
+
+    #Contact .Head p {
+        margin-bottom: 5rem;
+        font-size: 1.25rem;
+    }
+
+    #Contact .Heading {
+        font-size: 3.5rem;
+    }
+
+    #Contact .form-box {
+        width: 90%;
+        height: 65%;
+    }
+
+    #Contact .form-box form .input-box {
+        margin: 2.5rem 0;
+    }
+
+    .input-box input:focus~label,
+    .input-box input:valid~label {
+        top: -0.6rem;
+        font-size: x-small;
+    }
+    .loder img {
+        height: 20%;
+        width: 40%;
+    }
+}
+
+/* ----------------Media Query Specially For Porjects---------------- */
+@media (width < 550px) {
+    .portfolio .content #Projects {
+        height: 300%;
+        margin-top: 10rem;
+    }
+
+    #Projects .project {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .card p {
+        font-size: 2rem;
+    }
+
+    #Projects .project {
+        height: 93%;
+        gap: 1.5rem;
+    }
+
+    .card .intro {
+        padding: 2.5rem;
+    }
+
+    .card .intro h2 {
+        font-size: 3.5rem;
+    }
+}
+
+/* --------------- Media Query For Mobile and small devices --------------- */
+@media (width < 460px) {
+    html {
+        font-size: 9.1px;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    nav {
+        align-items: center;
+        flex-direction: row;
+        padding: 1rem 2rem;
+        height: 3rem;
+        justify-content: space-around;
+        width: 20rem;
+        z-index: 2;
+        position: fixed;
+        bottom: 2rem;
+    }
+
+    .portfolio {
+        width: 95%;
+        height: 100%
+    }
+
+    .portfolio .Header {
+        height: 80%;
+        position: fixed;
+        width: 90%;
+    }
+
+    .portfolio .Header H1 {
+        font-size: 4rem;
+    }
+
+    .portfolio .Header .myCV {
+        position: relative;
+        top: 5%;
+    }
+
+    .portfolio .Header h2 {
+        font-size: 2rem;
+    }
+
+    .portfolio .Header .social a img {
+        height: 2.2rem;
+        width: 2.2rem;
+        margin: 1.5rem 2rem;
+    }
+
+    .portfolio .content {
+        position: relative;
+        width: 102%;
+        top: 70%;
+        height: 60%
+    }
+
+    .portfolio .content #Home {
+        align-items: flex-start;
+        justify-content: center;
+        padding-bottom: 2rem;
+        height: 50%
+    }
+
+    .portfolio .content #Home .wrapper {
+        margin-top: 1.5rem;
+    }
+
+    .portfolio .content #Home .wrapper .static-text {
+        font-size: 2.6rem;
+        font-weight: 600;
+    }
+
+    .portfolio .content #Home .wrapper .dynamic-text {
+        margin-left: 0.5rem;
+        height: 3rem;
+        font-size: 2.6rem;
+        line-height: 3rem;
+        overflow: hidden;
+    }
+
+    .portfolio .content #Home .wrapper .dynamic-text li span::after {
+        height: 90%;
+    }
+
+    @keyframes slide {
+        100% {
+            top: -12rem;
+        }
+    }
+
+    .portfolio .content #About {
+        min-height: 152%;
+        margin-bottom: 15%;
+    }
+
+    #About .about {
+        height: 91%;
+    }
+
+    #About .about h2 {
+        font-size: 3.5rem;
+    }
+
+    #About .about ul li {
+        font-size: 1.5rem;
+    }
+
+    #About .skill {
+        height: 25%;
+        width: 97%;
+    }
+
+    #About .skill h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #About .skill span {
+        padding: 0.3rem;
+        border-radius: 1.4rem;
+        font-size: 1.6rem;
+        margin-right: 1rem;
+    }
+
+    .portfolio .content #Projects {
+        height: 250%;
+        margin-top: 0rem;
+    }
+
+    #Projects .Heading {
+        font-size: 3.5rem;
+    }
+
+    .card .intro h2 {
+        font-size: 2.5rem;
+    }
+
+    .card p {
+        font-size: 1.7rem;
+    }
+
+    .portfolio .content #Contact {
+        height: 110%;
+    }
+
+    #Contact .Head {
+        height: 75%;
+        padding: 0;
+    }
+
+    #Contact .Head p {
+        margin-bottom: 5rem;
+        font-size: 1.6rem;
+    }
+
+    #Contact .Heading {
+        font-size: 3.5rem;
+    }
+
+    #Contact .form-box {
+        width: 95%;
+        height: 55%;
+        padding: 0rem;
+    }
+
+    #Contact .form-box form .input-box {
+        margin: 2.5rem 0;
+    }
+
+    .input-box input:focus~label,
+    .input-box input:valid~label {
+        top: -0.6rem;
+        font-size: x-small;
+    }
+    .loder img {
+        height: 15%;
+        width: 40%;
+    }
+}
